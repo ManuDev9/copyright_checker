@@ -3,7 +3,7 @@ This is a very simple python project that let you check the license date in all 
 
 If no copyright notice is found, the script will just print the path to the file
 
-The copyright is expected to be in the fourth line
+The copyright is expected to be in the fourth line!!!
 
 There are the expected formats:
 - Copyright (c) XXXX-YYYY
@@ -14,4 +14,9 @@ Which will be respectively transformed into:
   - If ZZZZ is the current year and ZZZZ != YYYY
 - Copyright (c) XXXX-ZZZZ
   - If ZZZZ is the current year and ZZZZ != XXXX
+
+How to use it:
+
+python3 copyright_checker.py <base_path>
+
 

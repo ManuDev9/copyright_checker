@@ -36,7 +36,7 @@ def update_copyright_year(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
-    # Check if the third line contains the copyright information
+    # Check if the fourth line contains the copyright information
     if len(lines) > 3:
         copyright_line = lines[3]  # Index 3 corresponds to the copyright line
 
@@ -101,6 +101,12 @@ def get_files_in_subfolders(root_folder):
                     continue
                 if "__pycache__" in full_path:
                     continue
+                if "build" in full_path:
+                    continue
+                if "bin" in full_path:
+                    continue
+                if "obj" in full_path:
+                    continue
 
                 if ".idea" in full_path:
                     continue
@@ -133,6 +139,10 @@ def get_files_in_subfolders(root_folder):
                 if ".blend" in full_path:
                     continue
                 if full_path.endswith(".o"):
+                    continue
+                if full_path.endswith(".webp"):
+                    continue
+                if full_path.endswith(".meta"):
                     continue
                 if full_path.endswith(".so"):
                     continue
